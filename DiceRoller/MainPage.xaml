@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiceRoller.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            
+            <Label Text="Rolador de dados"
+                   SemanticProperties.Description="Titulo: Rolador de dados"
+                   HorizontalOptions="Center"
+                   Margin="0, 10, 0, 10"
+                   />
+
+            <Label 
+                Text="0"
+                x:Name="labelDiceValue"
+                HorizontalOptions="Center"
+                Margin="0, 10, 0, 10"
+                />
+
+            <Picker x:Name="dropbox"
+                    Title="Quantidade de Lados"
+                    HorizontalOptions="Center"
+                    Margin="0, 20, 0, 20"
+                    >
+                <Picker.Items>
+                    <x:String>4</x:String>
+                        <x:String>6</x:String>
+                        <x:String>10</x:String>
+                        <x:String>20</x:String>
+                    <x:String>100</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button
+                x:Name="BtnRollDice"
+                Text="ROLAR O DADO" 
+                SemanticProperties.Hint="Botão: Rolar dados."
+                Clicked="OnRollClicked"
+                HorizontalOptions="Center"
+                Margin="0, 10, 0, 10"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
